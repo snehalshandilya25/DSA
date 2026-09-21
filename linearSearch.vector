@@ -1,1 +1,22 @@
+#include <iostream>
+#include<vector>
+using namespace  std;
+int linearsearch(const vector<int> &vec,int target){
+    
+    for(int i=0;i<vec.size();i++){
+        if(vec[i]==target){
+            return i;
+        }
+    }
+    return -1;
+}
+int main()
+{
+   vector<int>num={10,20,30,40,50};
+   int target;
+   cout<<"enter the target element: ";
+   cin>>target;
+   cout<<"Target value is matched at index: "<<linearsearch(num,target)<<endl;;
 
+    return 0;
+}
