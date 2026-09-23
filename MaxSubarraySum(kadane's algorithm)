@@ -1,0 +1,19 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+int main()
+{
+    int arr[]={3,-4,5,4,-1,7,-8};
+    int size=7;
+    int maxsum=INT_MIN;
+    int cs=0;
+    for(int i=0;i<size;i++){
+        cs +=arr[i];
+        maxsum = max(cs,maxsum);
+        if(cs<0){
+            cs=0;
+        }
+    } cout<<"maximum value of subarraysum: "<<maxsum<<endl;
+
+    return 0;
+}
